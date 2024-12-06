@@ -1,3 +1,4 @@
+dask-ml
 laspy
 lazrs[laszip]
 laszip
