@@ -1,6 +1,5 @@
 FROM quay.io/jupyter/datascience-notebook:latest
 
-# Set the working directory
 WORKDIR /home/jovyan/work
 
 # Switch to root user to install dependencies
@@ -25,11 +24,10 @@ RUN apt-get install -y \
 # Clone the repository
 RUN git clone https://github.com/pramonettivega/lidar_demo.git /home/jovyan/work/lidar_demo
 
-# Install Python dependencies
+# Install requirements.txt
 RUN pip install --no-cache-dir -r /home/jovyan/work/lidar_demo/requirements.txt
 
 # Set permissions for the working directory
 RUN chown -R jovyan:users /home/jovyan/work
 
-# Switch back to jovyan user
 USER jovyan
