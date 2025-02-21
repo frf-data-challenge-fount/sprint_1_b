@@ -22,10 +22,12 @@ RUN apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
-RUN git clone https://github.com/pramonettivega/lidar_demo.git /home/jovyan/work/lidar_demo
+RUN git clone https://github.com/pramonettivega/sprint_1_b.git /home/jovyan/work/lidar_demo
 
 # Install requirements.txt
 RUN pip install --no-cache-dir -r /home/jovyan/work/lidar_demo/requirements.txt
+
+RUN rm -rf /home/jovyan/work/lidar_demo
 
 # Set permissions for the working directory
 RUN chown -R jovyan:users /home/jovyan/work
