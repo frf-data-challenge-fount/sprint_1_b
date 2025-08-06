@@ -1,4 +1,4 @@
-# Exploring ALS and TLS Point Clouds
+# Sprint 1 B
 
 In this courselet, you will work with ALS and TLS data. To help you get started, an introductory notebook is provided: lidar_data.ipynb. Additionally, a base notebook, sprint1_5-6_team-name.ipynb, outlines four specific tasks for your team to complete.
 
