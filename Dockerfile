@@ -2,7 +2,6 @@ FROM quay.io/jupyter/datascience-notebook:latest
 
 WORKDIR /home/jovyan/work
 
-# Switch to root user to install dependencies
 USER root
 
 # Add necessary repositories for PDAL
@@ -22,14 +21,10 @@ RUN apt-get install -y \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Clone the repository
-RUN git clone https://github.com/pramonettivega/sprint_1_b.git /home/jovyan/work/lidar_demo
+RUN git clone https://github.com/pramonettivega/sprint_1_b.git /home/jovyan/work/sprint_1_b
 
-# Install requirements.txt
 RUN pip install --no-cache-dir -r /home/jovyan/work/lidar_demo/requirements.txt
 
-RUN rm -rf /home/jovyan/work/lidar_demo
-
-# Set permissions for the working directory
 RUN chown -R jovyan:users /home/jovyan/work
 
 USER jovyan
