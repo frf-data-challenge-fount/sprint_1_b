@@ -23,7 +23,7 @@ RUN apt-get install -y \
 # Clone the repository
 RUN git clone https://github.com/pramonettivega/sprint_1_b.git /home/jovyan/work/sprint_1_b
 
-RUN pip install --no-cache-dir -r /home/jovyan/work/lidar_demo/requirements.txt
+RUN pip install --no-cache-dir -r /home/jovyan/work/sprint_1_b/requirements.txt
 
 RUN chown -R jovyan:users /home/jovyan/work
 
